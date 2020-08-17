@@ -26,6 +26,9 @@ for(let q of qns){
       box.setAttribute('checked', true);
     }
   }
+  for(let box of clonedQ.querySelectorAll('textarea')){
+    box.innerText = box.value;
+  }
   str += clonedQ.innerHTML;
 }
 
