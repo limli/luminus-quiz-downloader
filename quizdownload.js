@@ -16,6 +16,32 @@ function download(filename, text) {
 style = `
 <style>
 .option-content{display:flex;align-items: center;}
+.connector{
+  stroke: #979797;
+  stroke-width: 2;
+}
+svg{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.option-container {
+  min-height: 38px;
+  width: auto;
+  max-width: 280px;
+  padding: 2%;
+  min-width: 160px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 </style>
 `
 str = style;
@@ -24,10 +50,16 @@ for(let q of qns){
   for(let box of clonedQ.querySelectorAll('input')){
     if((box.type == "checkbox" || box.type == "radio") && box.checked){
       box.setAttribute('checked', true);
+    } else if(box.type == 'text') {
+      box.setAttribute('value', box.value);
     }
   }
   for(let box of clonedQ.querySelectorAll('textarea')){
     box.innerText = box.value;
+  }
+  if(q.querySelectorAll('.matching-left').length > 0){
+    let container = clonedQ.querySelector('.question-container');
+    container.style = "display:flex;justify-content: space-between;position:relative;"
   }
   str += clonedQ.innerHTML;
 }
