@@ -1,5 +1,5 @@
 # luminus-quiz-downloader
-For downloading quizes on luminus, since printing the page doesn't work.
+For downloading quizzes on luminus, since printing the page doesn't work.
 
 Instructions:
 1. Go to the luminus quiz page you would like to print
