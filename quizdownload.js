@@ -20,7 +20,7 @@ style = `
   stroke: #979797;
   stroke-width: 2;
 }
-svg{
+.question-container > svg{
   height: 100%;
   width: 100%;
   position: absolute;
