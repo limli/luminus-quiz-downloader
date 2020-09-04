@@ -50,7 +50,7 @@ for(let q of qns){
   for(let box of clonedQ.querySelectorAll('input')){
     if((box.type == "checkbox" || box.type == "radio") && box.checked){
       box.setAttribute('checked', true);
-    } else if(box.type == 'text') {
+    } else if(box.type == 'text' || box.type === 'number') {
       box.setAttribute('value', box.value);
     }
   }
