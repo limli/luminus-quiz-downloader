@@ -55,7 +55,7 @@ for(let q of qns){
     }
   }
   for(let box of clonedQ.querySelectorAll('textarea')){
-    box.innerText = box.value;
+    box.innerHTML = box.value;
   }
   if(q.querySelectorAll('.matching-left').length > 0){
     let container = clonedQ.querySelector('.question-container');
