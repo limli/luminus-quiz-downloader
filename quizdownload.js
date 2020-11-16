@@ -42,6 +42,12 @@ style = `
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.option-incorrect {
+  background-color: rgba(200, 33, 40, 0.12);
+}
+.option-correct {
+  background-color: #DFEEDB;
+}
 </style>
 `
 str = style;
