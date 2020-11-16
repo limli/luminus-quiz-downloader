@@ -43,9 +43,11 @@ style = `
   margin-bottom: 10px;
 }
 .option-incorrect {
+  -webkit-print-color-adjust: exact;
   background-color: rgba(200, 33, 40, 0.12);
 }
 .option-correct {
+  -webkit-print-color-adjust: exact;
   background-color: #DFEEDB;
 }
 </style>
